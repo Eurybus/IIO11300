@@ -3,6 +3,7 @@
 * This file is part of the IIO11300 course project.
 * Created: 12.1.2016 Modified: 13.1.2016
 * Authors: Atro Lähdemäki, Esa Salmikangas
+asd
 */
 using System;
 using System.Collections.Generic;
@@ -36,8 +37,20 @@ namespace Tehtava1
             //TODO
             try
             {
-                double result;
-                result = BusinessLogicWindow.CalculatePerimeter(1, 1);
+                double resultPer, resultArea, resultBzlArea;
+
+                double width = double.Parse(txtWidht.Text);
+                double height = double.Parse(txtHeight.Text);
+                double bzlWidth = double.Parse(txtBzlWidth.Text);
+
+                resultBzlArea = BusinessLogicWindow.BezelCalculateArea(bzlWidth, width, height);
+                resultPer = BusinessLogicWindow.CalculatePerimeter(width, height);
+                resultArea = BusinessLogicWindow.CalculateArea(width, height) - resultBzlArea;
+                
+
+                txtArea.Text = resultArea.ToString();
+                txtPer.Text = resultPer.ToString();
+                txtBzlArea.Text = resultBzlArea.ToString();
             }
             catch (Exception ex)
             {
@@ -51,7 +64,7 @@ namespace Tehtava1
 
     private void btnClose_Click(object sender, RoutedEventArgs e)
     {
-
+            Environment.Exit(0);
     }
   }
 
@@ -60,9 +73,28 @@ namespace Tehtava1
     /// <summary>
     /// CalculatePerimeter calculates the perimeter of a window
     /// </summary>
-    public static double CalculatePerimeter(double widht, double height)
+    public static double CalculatePerimeter(double width, double height)
         {
-            throw new System.NotImplementedException();
+            return width * 2 + height * 2;
+        }
+        /// <summary>
+        /// CalculateArea calculates the area of a window
+        /// </summary>
+        public static double CalculateArea(double width, double height)
+        {
+            return width * height;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bzlwidth">Width of the bezel</param>
+        /// <param name="xLength">Length of the horizontal bezel</param>
+        /// <param name="yLength">Length of the vertical bezel</param>
+        /// <returns></returns>
+        public static double BezelCalculateArea(double bzlwidth, double xLength, double yLength)
+        {
+            return ((bzlwidth * xLength)*2)+((bzlwidth*yLength)*2);
         }
     }
+    
 }
