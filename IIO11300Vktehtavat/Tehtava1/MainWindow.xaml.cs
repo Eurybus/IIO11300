@@ -6,19 +6,8 @@
 asd
 */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Tehtava1
 {
@@ -66,9 +55,31 @@ namespace Tehtava1
     {
             Environment.Exit(0);
     }
-  }
 
-  public class BusinessLogicWindow
+        private void btnAreaOO_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Lasketaan Pinta-Ala Ikkuna-Olion avulla
+                //Luodaan luokasta olio
+                JAMK.IT.IIO11300.Ikkuna Ikk = new JAMK.IT.IIO11300.Ikkuna();
+                Ikk.Korkeus = double.Parse(txtHeight.Text);
+                Ikk.Leveys = double.Parse(txtWidht.Text);
+                //tulos käyttäjälle
+                //VE metodilla
+                //MessageBox.Show(Ikk.LaskePintaAla().ToString());
+                //Ve property
+                MessageBox.Show(Ikk.PintaAla.ToString());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
+
+    public class BusinessLogicWindow
     {
     /// <summary>
     /// CalculatePerimeter calculates the perimeter of a window
