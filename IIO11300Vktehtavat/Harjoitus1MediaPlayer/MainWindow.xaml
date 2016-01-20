@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Title="MFMP - My Fine Media Player" Height="350" Width="525">
     <Grid>
-        <Button x:Name="btnPlay" Content="Paly!" HorizontalAlignment="Left" Margin="61,41,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
-        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="232" Margin="10,77,0,0" VerticalAlignment="Top" Width="497" LoadedBehavior="Manual" Source="D:\Downloads"/>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="277" VerticalAlignment="Top" Width="517" LoadedBehavior="Manual" Source="D:\Downloads"/>
+        <Grid>
+            <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="188,289,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
+            <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="268,289,0,0" VerticalAlignment="Top" Width="75" Click="btnPause_Click"/>
+            <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="348,289,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click"/>
+        </Grid>
 
     </Grid>
 </Window>
