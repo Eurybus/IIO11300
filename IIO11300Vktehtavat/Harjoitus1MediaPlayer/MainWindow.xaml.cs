@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,19 +24,23 @@ namespace Harjoitus1MediaPlayer
         public MainWindow()
         {
             InitializeComponent();
-            LoadMediaFile();
         }
 
         private void LoadMediaFile()
         {
             try
             {
-                //Ladataan käyttäjän valitsemaa mediatiedostoa
-                string file = @"D:\Downloads\Doctor.Who.2005.2015.Christmas.Special.720p.mHD.DailyFliX.XviD.avi";
+                //Ladataan käyttäjän antama mediatiedostoa
+                //string file = @"D:\Downloads\Doctor.Who.2005.2015.Christmas.Special.720p.mHD.DailyFliX.XviD.avi";
+                string file = txtFileName.Text;
                 //tutkitaan onko tiedosto olemassa
                 if (System.IO.File.Exists(file))
                 {
                     mediaElement.Source = new Uri(file);
+                }
+                else
+                {
+                    MessageBox.Show("File " + file + "not found");
                 }
                 //MessageBox.Show("Musiken!");
             }
@@ -47,18 +52,44 @@ namespace Harjoitus1MediaPlayer
         }
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            
+            LoadMediaFile();
             mediaElement.Play();
+            ChangeButtonsState();
+            
         }
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
             mediaElement.Pause();
+            ChangeButtonsState();
+
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             mediaElement.Stop();
+            ChangeButtonsState();
+
+        }
+
+        private void btnBrowse_Click(object sender, RoutedEventArgs e)
+        {
+            //avataan vakio open-dialogi jotta käyttäjä voi valita yhden tiedoston
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.InitialDirectory = "D:\\";
+            dlg.Filter = "Music files (*.mp3)|*.mp3|Video files (*.wmv, *.avi)|*.wmv;*.avi|All files (*.*)|*.*";
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                txtFileName.Text = dlg.FileName;
+            }
+        }
+        private void ChangeButtonsState()
+        {
+            //muutetaan nappuloitten tilaa
+            btnPause.IsEnabled = !btnPause.IsEnabled;
+            btnStop.IsEnabled = !btnStop.IsEnabled;
+            btnPlay.IsEnabled = !btnPlay.IsEnabled;
         }
     }
 }
