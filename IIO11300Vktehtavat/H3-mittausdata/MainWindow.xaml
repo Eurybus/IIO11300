@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H3_mittausdata"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="595.192">
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" Margin="0,5,0,0" VerticalAlignment="Stretch">
             <TabItem Header="Data Input">
@@ -16,7 +16,10 @@
                             <TextBlock x:Name="txtToday"/>
                             <TextBlock Text="Tiedostonimi:" Margin="10,0,0,0"/>
                             <TextBox x:Name="txtFileName" Text="D:\foo\bar" Width="150" Margin="5,0,0,0"/>
-                         </StackPanel>
+                            <Button x:Name="btnWriteOut" Content="Save to file" Margin="10,0,0,0" Click="btnWriteOut_Click"/>
+                            <Button x:Name="btnReadFromFile" Content="Read from file" Margin="10,0,0,0" Click="btnReadFromFile_Click"/>
+                            <Button x:Name="btnSaveToXML" Content="Save to XML file" Margin="10,0,0,0" Click="btnSaveToXML_Click"/>
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Klo"/>
                             <TextBox x:Name="txtClock" Width="60" Margin="5,0,5,0"/>
