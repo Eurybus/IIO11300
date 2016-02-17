@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava1", "Tehtava1\Tehtava1.csproj", "{BBFDB3F8-2232-4C51-A154-1DFFF2E75FE7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus1MediaPlayer", "Harjoitus1MediaPlayer\Harjoitus1MediaPlayer.csproj", "{FCADEB3F-AC13-4A38-9B82-87D52D577128}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3-mittausdata", "H3-mittausdata\H3-mittausdata.csproj", "{F41AD584-075C-4B3B-B137-E360D6A78DF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus_04_konsoli_xml", "Harjoitus_04_konsoli_xml\Harjoitus_04_konsoli_xml.csproj", "{18DB9CD8-FF68-4386-A45F-F5321A1D668C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus_05_WPF_XML", "Harjoitus_05_WPF_XML\Harjoitus_05_WPF_XML.csproj", "{FB613885-D89A-4B3D-B06C-1E6D933734FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H6-Xml_movies", "H6-Xml_movies\H6-Xml_movies.csproj", "{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{F41AD584-075C-4B3B-B137-E360D6A78DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F41AD584-075C-4B3B-B137-E360D6A78DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F41AD584-075C-4B3B-B137-E360D6A78DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18DB9CD8-FF68-4386-A45F-F5321A1D668C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DB9CD8-FF68-4386-A45F-F5321A1D668C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DB9CD8-FF68-4386-A45F-F5321A1D668C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DB9CD8-FF68-4386-A45F-F5321A1D668C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB613885-D89A-4B3D-B06C-1E6D933734FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB613885-D89A-4B3D-B06C-1E6D933734FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB613885-D89A-4B3D-B06C-1E6D933734FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB613885-D89A-4B3D-B06C-1E6D933734FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

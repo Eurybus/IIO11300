@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Harjoitus_05_WPF_XML.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="XMLTiedosto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Eurybus\Documents\IIO11300\IIO11300Vktehtavat\Harjoitus_04_konsoli_xml\tyontekijat.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
