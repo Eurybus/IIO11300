@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava1", "Tehtava1\Tehtava1.csproj", "{BBFDB3F8-2232-4C51-A154-1DFFF2E75FE7}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus_05_WPF_XML", "Harjoitus_05_WPF_XML\Harjoitus_05_WPF_XML.csproj", "{FB613885-D89A-4B3D-B06C-1E6D933734FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H6-Xml_movies", "H6-Xml_movies\H6-Xml_movies.csproj", "{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava6-ViiniKellari", "Tehtava6-ViiniKellari\Tehtava6-ViiniKellari.csproj", "{4186BDCD-ACEF-4686-8155-F6592A4E8066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F26A3AC0-0901-4A1B-AC7F-13420D06EC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4186BDCD-ACEF-4686-8155-F6592A4E8066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4186BDCD-ACEF-4686-8155-F6592A4E8066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4186BDCD-ACEF-4686-8155-F6592A4E8066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4186BDCD-ACEF-4686-8155-F6592A4E8066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

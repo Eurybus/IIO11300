@@ -1,0 +1,25 @@
+﻿<Window x:Class="Tehtava6_ViiniKellari.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava6_ViiniKellari"
+        mc:Ignorable="d"
+        Title="Window1" Height="325.21" Width="519.328">
+    <StackPanel Margin="20,0,20,10">
+        <StackPanel Orientation="Horizontal" Margin="40,15,0,10">
+            <Button Name="btnGetWines" Content="Query Wines" Margin="0,0,15,0" Click="btnGetWines_Click"/>
+            <ComboBox x:Name="cmbWines" SelectionChanged="cmbWines_SelectionChanged"/>
+        </StackPanel>
+        <Grid Margin="0,0,0,10">
+            <DataGrid Name="dgWines" ItemsSource="{Binding}" AutoGenerateColumns="False" Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Element[nimi].Value}"/>
+                    <DataGridTextColumn Header="Country" Binding="{Binding Path=Element[maa].Value}"/>
+                    <DataGridTextColumn Header="Rating" Binding="{Binding Path=Element[arvio].Value}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <TextBlock Name="tbPath" Text="No file loaded" VerticalAlignment="Bottom" />
+    </StackPanel>
+</Window>
