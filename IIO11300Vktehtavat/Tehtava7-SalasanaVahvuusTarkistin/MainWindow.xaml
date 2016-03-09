@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tehtava7_SalasanaVahvuusTarkistin"
         mc:Ignorable="d"
-        Title="Password Strength Checker" Height="257.843" Width="431.863">
+        Title="Password Strength Checker" Height="293.602" Width="431.863">
     <Grid HorizontalAlignment="Left">
         <StackPanel Margin="10">
             <TextBlock Text="Tarkistettava salasana:"/>
@@ -15,6 +15,7 @@
             <TextBlock Text="..." x:Name="tbMinorChars"/>
             <TextBlock Text="..." x:Name="tbNumbers"/>
             <TextBlock Text="..." x:Name="tbSpecialChars"/>
+            <TextBlock Text="..." x:Name="tbSha1"/>
             <TextBlock Text="Anna salasana" x:Name="tbIndicator" FontSize="64" Background="Gray" />
         </StackPanel>
     </Grid>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
 
 namespace Tehtava7_SalasanaVahvuusTarkistin
 {
@@ -34,7 +35,26 @@ namespace Tehtava7_SalasanaVahvuusTarkistin
             tbMinorChars.Text = "Pieniä kirjaimia: " + LowerCharCount(pw);
             tbNumbers.Text = "Numeroita: " + NumberCount(pw);
             tbSpecialChars.Text = "Erikoismerkkejä: " + SpecialCharCount(pw);
+            tbSha1.Text = "";
+            //tbSha1.Text = "Sha1: " + Hash(pw);
             InformUserPwEntropy(pw);
+        }
+
+        static string Hash(string input)//For calculating Sha1 of the password
+        {
+            using (SHA1Managed sha1 = new SHA1Managed())
+            {
+                var hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(input));
+                var sb = new StringBuilder(hash.Length * 2);
+
+                foreach (byte b in hash)
+                {
+                    // can be "x2" if you want lowercase
+                    sb.Append(b.ToString("X2"));
+                }
+
+                return sb.ToString();
+            }
         }
 
         private int CapitalCharCount(string text)
