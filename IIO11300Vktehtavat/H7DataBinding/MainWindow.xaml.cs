@@ -53,13 +53,21 @@ namespace H7DataBinding
         private void btnForward_Click(object sender, RoutedEventArgs e)
         {
             clicked++;
+            if (clicked > joukkuuet.Count) clicked = 0;
             grid1.DataContext = joukkuuet[clicked];
         }
 
         private void btnBackward_Click(object sender, RoutedEventArgs e)
         {
             clicked--;
+            if (clicked < 0) clicked = joukkuuet.Count;
             grid1.DataContext = joukkuuet[clicked];
+        }
+
+        private void btnShowPlayers_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerWindow win = new PlayerWindow();
+            win.ShowDialog();
         }
     }
 
