@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava1", "Tehtava1\Tehtava1.csproj", "{BBFDB3F8-2232-4C51-A154-1DFFF2E75FE7}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava7-SalasanaVahvuusTarkistin", "Tehtava7-SalasanaVahvuusTarkistin\Tehtava7-SalasanaVahvuusTarkistin.csproj", "{EA9C420D-BF23-4D24-AD74-94AB8BFCD7DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H8-Sql", "H8-Sql\H8-Sql.csproj", "{20727910-1D88-4662-BCB8-C87E7BD6CE33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava8-ViiniAsiakkaat", "Tehtava8-ViiniAsiakkaat\Tehtava8-ViiniAsiakkaat.csproj", "{81C4DE55-0B4F-49E9-92AE-201742B3A099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{20727910-1D88-4662-BCB8-C87E7BD6CE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20727910-1D88-4662-BCB8-C87E7BD6CE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20727910-1D88-4662-BCB8-C87E7BD6CE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81C4DE55-0B4F-49E9-92AE-201742B3A099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81C4DE55-0B4F-49E9-92AE-201742B3A099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81C4DE55-0B4F-49E9-92AE-201742B3A099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81C4DE55-0B4F-49E9-92AE-201742B3A099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
