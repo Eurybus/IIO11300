@@ -1,0 +1,64 @@
+﻿<Window x:Class="H11BookshopEF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H11BookshopEF"
+        mc:Ignorable="d"
+        Title="Bookshop EF" Height="350" Width="631.022">
+    <Grid>
+        <StackPanel Margin="10,5,10,0">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <Button x:Name="btnGetBooks" Click="btnGetBooks_Click">Hae kirjat EF</Button>
+                    <Button x:Name="btnGetClients" Click="btnGetClients_Click">Hae asiakkaat ef</Button>
+                    <ComboBox x:Name="cbCountries" SelectionChanged="cbCountries_SelectionChanged" ItemsSource="{Binding}"/>
+                </StackPanel>
+                <StackPanel Name="spBook" MinWidth="200" Orientation="Horizontal" Margin="10,0,0,0">
+                    <StackPanel>
+                        <TextBlock>Tuote</TextBlock>
+                        <TextBlock>Nimi</TextBlock>
+                        <TextBlock>Kirjailija</TextBlock>
+                        <TextBlock>Maa</TextBlock>
+                        <TextBlock>Vuosi</TextBlock>
+                    </StackPanel>
+                    <StackPanel MinWidth="200" HorizontalAlignment="Left">
+                        <!-- olion property ovat casesensitive-->
+                        <TextBlock Name="txtKirja" Text="{Binding Path=DisplayName, Mode=Oneway}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1"></TextBlock>
+                        <TextBox Name="txtNimi" Text="{Binding Path=name, UpdateSourceTrigger=PropertyChanged}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1"></TextBox>
+                        <TextBox Name="txtKirjailija" Text="{Binding Path=author, UpdateSourceTrigger=PropertyChanged}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1"></TextBox>
+                        <TextBox Name="txtMaa" Text="{Binding Path=country}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1"></TextBox>
+                        <TextBox Name="txtVuosi" Text="{Binding Path=year}" FontFamily="Tw Cen MT Condensed Extra Bold" MinWidth="40" MaxWidth="40" HorizontalAlignment="Left" Margin="1"></TextBox>
+                        <Button x:Name="btnUusi" Content="Uusi"/>
+                        <Button x:Name="btnTallenna" Content="Tallenna"/>
+                        <Button x:Name="btnPoista" Content="Poista"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Name="spClient" MinWidth="200" Orientation="Horizontal" Margin="10,0,0,0">
+                    <StackPanel>
+                        <TextBlock>Asiakas</TextBlock>
+                        <TextBlock>Etunimi</TextBlock>
+                        <TextBlock>Sukunimi</TextBlock>
+                        <TextBlock>Tilauksia</TextBlock>
+                    </StackPanel>
+                    <StackPanel Name="spCustomer">
+                        <TextBlock Name="tbAsiakas" Text="placeholder"/>
+                        <TextBox x:Name="txtAsiakaseNimi" Text="{Binding Path=firstname}"/>
+                        <TextBox x:Name="txtAsiakasSnmi" Text="{Binding Path=lastname}"/>
+                        <TextBox x:Name="txtTilauksia" Text="{Binding Path=OrdersCount, Mode=OneWay}"/>
+                        <Button x:Name="btnAsiakkaanTilaukset" Content="Asiakkaan tilaukset" Click="btnAsiakkaanTilaukset_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <DataGrid x:Name="dgBooks" AutoGenerateColumns="True" ItemsSource="{Binding}" SelectionChanged="dgBooks_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel>
+                <StatusBar>
+
+                </StatusBar>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>
